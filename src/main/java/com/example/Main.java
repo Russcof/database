@@ -12,13 +12,13 @@ public class Main {
         System.out.println("____________________________");
 
         String login = "customer_2";
-        Users result = dbService.getUser(login);
+        Users result = dbService.selectUser(login);
         System.out.println("первый запрос: " + result);
 
         System.out.println("____________________________");
         Users newUser = new Users();
-        newUser.setLogin("customer_9");
-        newUser.setPassword("qwertyu48111");
+        newUser.setLogin("customer_10");
+        newUser.setPassword("qwertyu48158");
         newUser.setEmail("customer3366@example.com");
         int number = dbService.insertUser(newUser);
         if (number != 0) {

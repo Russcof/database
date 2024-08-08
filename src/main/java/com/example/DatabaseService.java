@@ -7,8 +7,7 @@ public class DatabaseService {
     private final String username = "itguy";
     private final String password = "2024";
 
-    public Users getUser(String login) throws SQLException {
-
+    public Users selectUser(String login) throws SQLException {
         Connection connection = null;
         ResultSet resultSet = null;
         Statement statement = null;
