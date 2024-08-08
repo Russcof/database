@@ -11,17 +11,16 @@ public class Main {
 
         System.out.println("____________________________");
 
-        String login = "gal";
+        String login = "customer_2";
         Users result = dbService.getUser(login);
         System.out.println("первый запрос: " + result);
 
         System.out.println("____________________________");
-
-        Map<String, String> newUser = new HashMap<>();
-        newUser.put("login","customer");
-        newUser.put("password","qwerty");
-        newUser.put("email","customer@example.com");
-        int number = dbService.postLogin(newUser);
+        Users newUser = new Users();
+        newUser.setLogin("customer_9");
+        newUser.setPassword("qwertyu48111");
+        newUser.setEmail("customer3366@example.com");
+        int number = dbService.insertUser(newUser);
         if (number != 0) {
             System.out.println("второй запрос: " + number);
         } else {
